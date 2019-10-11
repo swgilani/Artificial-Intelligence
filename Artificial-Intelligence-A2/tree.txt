@@ -1,0 +1,55 @@
+Syed Gilani - 500774969
+Shail Patel - 500766622
+Parth Patel - 500588969
+
+
+Question replace(...)
+	is followed by the answer. 
+
+
+?-replace(a,b, tree(v, tree(c,void,void), tree(a,void,void)), T).
+	 T = tree(v, tree(c, void, void), tree(b, void, void)) .
+
+
+?-replace(a,b, tree(a, tree(c,void,tree(b,void,tree(a,void,void))),void), T).
+      	T = tree(b, tree(c, void, tree(b, void, tree(b, void, void))), void) 
+
+
+?-replace(a,b, tree(a,tree(b,tree(c,void,void),tree(a,void,void)),void),T).  
+	T = tree(b, tree(b, tree(c, void, void), tree(b, void, void)), void) 
+
+
+
+?- replace(a,b, tree(a,tree(b,tree(c,void,void),tree(a,tree(a,void,void),void)),void),T).  
+T = tree(b, tree(b, tree(c, void, void), tree(b, tree(b, void, void), void)), void) 
+
+
+?- replace(a,b, tree(a,tree(b,tree(c,void,void),tree(a,void,void)),tree(a,tree(c,void,tree(a,void,void)), void)),T).  
+T = tree(b, tree(b, tree(c, void, void), tree(b, void, void)), tree(b, tree(c, void, tree(b, void, void)), void)) 
+
+
+?- replace(1,9, tree(1,tree(9,void,void),void),T).  
+T = tree(9, tree(9, void, void), void) 
+
+
+?- replace(1,9, tree(1,tree(9,tree(2,tree(1,void,void),void),void),void),T).  
+T = tree(9, tree(9, tree(2, tree(9, void, void), void), void), void) 
+
+
+
+?- expand(2, tree(4,void,void),T2), expand(1,T2,T1), expand(3,T1,T3),expand(6,T3,T6), expand(5,T6,T5), expand(7,T5,T7).
+T2 = tree(4, tree(2, void, void), void),
+T1 = tree(4, tree(2, tree(1, void, void), void), void),
+T3 = tree(4, tree(2, tree(1, void, void), tree(3, void, void)), void),
+T6 = tree(4, tree(2, tree(1, void, void), tree(3, void, void)), tree(6, void, void)),
+T5 = tree(4, tree(2, tree(1, void, void), tree(3, void, void)), tree(6, tree(5, void, void), void)),
+T7 = tree(4, tree(2, tree(1, void, void), tree(3, void, void)), tree(6, tree(5, void, void), tree(7, void, void)).
+
+
+
+?- expand(3,tree(2,void,void),T1), expand(12,tree(15,tree(16,void,void),tree(19,void,void)),T2).
+T1 = tree(2, void, tree(3, void, void)),
+T2 = tree(15, tree(16, tree(12, void, void), void), tree(19, void, void)) 
+
+?- expand(3,tree(2,void, tree(5,void,void)),T2).
+T2 = tree(2, void, tree(5, tree(3, void, void), void))

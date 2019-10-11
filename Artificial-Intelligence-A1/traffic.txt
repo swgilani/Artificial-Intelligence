@@ -1,0 +1,122 @@
+﻿Syed Gilani - 500774969
+Shail Patel - 500766622
+Parth Patel - 500588969
+
+
+
+
+at(honda,11,-26).
+
+
+yes
+-----------
+
+
+at(subaru,-3,34).
+
+
+yes
+------------
+at(bmw,-22,-19).
+
+
+yes
+-------------
+at(ford,21,14).
+
+
+yes
+----------
+ light(green,11,-26).
+
+
+true ? ;
+
+
+no
+-----------
+light(green,-3,34).
+
+
+yes
+------------
+light(red,-22,-19).
+
+
+true ? ;
+
+
+no
+----------
+light(red,21,14).
+
+
+yes
+----------
+canDriveStraight(Car,X,Y).
+
+
+Car = honda
+X = 11
+Y = -26 ? ;
+
+
+Car = subaru
+X = -3
+Y = 34 ? ;
+
+
+no
+----------
+canTurnLeft(Car,X,Y).
+
+
+X = 11
+Y = -26 ? ;
+
+
+X = -3
+Y = 34 ? ;
+
+
+(1 ms) no
+-----------
+canTurnRight(Car,X,Y).
+
+
+X = 11
+Y = -26 ? ;
+
+
+X = -3
+Y = 34 ? ;
+
+
+Car = ford
+X = 21
+Y = 14 ? ;
+
+
+no
+---------
+
+
+
+
+The answers we are getting for canDriveStraight, canTurnLeft and canTurnRight are work perfectly as they should be, and that is because: 
+
+
+For canDriveStraight, it only returns true for Honda and Subaru, and that’s because those car are the only ones who can see the green light. The other two can see red light (according to our database), therefore the answer we get for this is correct
+
+
+For canTurnLeft, the answers we receive for this are true for Honda and Subaru (meaning that both honda and subaru are the only cars that can turn left). This is true because both Honda and Subaru are on a green light, therefore eligible to make a left turn if and only if the distance between the incoming car from the other direction and the car making the turn is less than 80 units. While using trace, we see that it is calculating the distance between the two cars using the distance predicate, and you get 61, which is less than 80. Therefore, since the light is green and the distance between honda and subaru, subaru and honda is less than 80, it is true for Honda and Subaru.
+
+
+For canTurnRight, it returns true for Honda, Subaru, and Ford. In this case, we don’t care that if the light is green or red, since cars can turn right on both green and red lights. We only care that there is no other incoming car that is travelling straight in the direction of a turn and such that the distance to that car is less than 45 units.
+* It returns true for Honda because the distance between honda (the turning car) and bmw(the incoming car) is 33, which is less than 45, therefore returning true. 
+* It also returns true for Subaru, because the distance between subaru(the turning car) and ford(the incoming car) is 31, which is less than 45, therefore returning true.
+* It also returns true for Ford because the distance between ford(the turning car) and Honda(the incoming car) is 41, which is less than 45, therefore returning true.
+* It returns false for BMW because the distance between BMW(the turning car) and Subaru(the incoming car) is 56, which is greater than 45, thus returning false for BMW.
+
+
+All the atomic statements (facts) return true because they are in the database.

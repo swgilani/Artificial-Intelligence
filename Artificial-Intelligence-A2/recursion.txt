@@ -1,0 +1,200 @@
+Syed Gilani - 500774969
+Shail Patel - 500766622
+Parth Patel - 500588969
+
+
+
+
+
+
+
+
+add(4, [1,2,3], X).
+
+
+X = [1,2,3] ? ;
+
+
+no
+
+
+
+
+add(0, [a,b,c,d], X).
+
+
+X = [] ? ;
+
+
+no
+
+
+add(0,[],X).
+
+
+X = [] ? ;
+
+
+no
+
+
+add(0,[q],[q]).
+
+
+no
+
+
+add(1,[],[a,b,c]).
+
+
+no
+
+
+add(3,[a,b,z,c],[a,b,c]).
+
+
+no
+
+
+add(3,[[a],b,[[[c]]],d],X).
+
+
+X = [[a],b,[[[c]]]]
+
+
+yes
+
+
+add(1,[a,b,c],[]).
+
+
+no
+
+
+
+
+convert([],[]).
+
+
+yes
+
+
+convert([five], [5]).
+
+
+true ?
+
+
+yes
+
+
+convert([one,two | [three,four]], X).
+
+
+X = [1,2,3,4] ? ;
+
+
+X = [1,2,3,4] ? ;
+
+
+no
+
+
+convert([one,two | [three,four]], [1,2,3,4]).
+
+
+true ? ;
+
+
+true ? ;
+
+
+no
+
+
+
+
+convert([two,four],[]).
+
+
+no
+
+
+convert([two,six],[two,six]).
+
+
+no
+
+
+convert([four], 4).
+
+
+no
+
+
+
+
+convert([one,two,three|[four,six]],X).
+
+
+X = [1,2,3,4,6] ? ;
+
+
+X = [1,2,3,4,6] ? ;
+
+
+no
+
+
+
+grep([a], [a,b,[c,a],[a],d,[a],[[a]],e],X).
+
+
+X = [4,6] ? ;
+
+
+no
+
+
+grep(live,[learn,as,if,you,were,to,live,forever],A).
+
+
+A = [7] ? ;
+
+
+no
+
+
+grep([1,2],[a,b,[1,2,3],c,[1|[2]],d],[5]).
+
+
+true ? ;
+
+
+no
+
+
+grep(1,[1,2,3,4,5,6,3,2,1], X).
+
+
+X = [1,9] ? ;
+
+
+no
+
+
+grep([],[a,b,c],X).
+
+
+no
+
+
+
+
+grep([],[a,[],c,[],[],b],X).
+
+
+X = [2,4,5] ? ;
+
+
+no

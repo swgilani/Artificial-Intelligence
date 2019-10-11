@@ -1,0 +1,108 @@
+Syed Gilani - 500774969
+Shail Patel - 500766622
+Parth Patel - 500588969
+
+
+
+
+
+
+[ [] ] and [F | F]
+these two pairs are only true when F = [].
+[F | F]
+F = []
+[ [] ]
+which equals to [ [] ], therefore true.
+----------------------------------------
+[F, [a,G|V]] and [V, [F,d,a]]
+*
+Now lets assume this is correct and try to to make [F, [a,G|V]] = [V, [F,d,a]]
+
+let F = V
+[V,[a,G|V]]
+let a = F, and let G = d.
+[V,[F,d|V]]
+now we need to let the tail of [F,d|V] = a, but by doing that, the head V would
+also change to a, causing the list to be:
+[a,[F,d|a]]
+change bar notation to regular and you get this:
+[a,[F,d,a]]
+this is not equal to [V, [F,d,a]], thus this is false.
+-----------------------------------------------------------------
+[F|G] and [[q,p,r,s]]
+This is true since:
+F = [q,p,r,s],
+G = [].
+Now transform from bar notation to regular notation, and you get [[q,p,r,s]]
+-------------------------------------------------------------------
+[F, [] | [c|G]] and [a | [G,c]]
+Lets assume that this is true and try to show that right hand side = left hand side
+
+[a | [G,c]]
+Now let F = a, and G = []
+[F | [[],c ]]
+[F,[] | [c]]
+let [c] = [c|G], where G = [] (from above)
+[F,[] | [c|G]]
+RHS = LHS, therefore this is true.
+--------------------------------------------------------------------
+[P,a | [d,P|R]] and [[a | [b,c]] | [F,G | [I]]]
+
+Lets assume this is true and try to show that RHS = LHS
+Let P = [a | [b,c]]
+P = [a,b,c]
+
+thus,
+
+[a,b,c,a | [d,a,b,c | R]]
+= [a,b,c,a,d,a,b,c | R]
+
+[[a | [b,c]] | [F,G | [I]]] = [a,b,c | [F,G | [I]]]
+
+let F = a, let G = d, and remove bar notation after a,b,c
+[a,b,c,a,d | [I]]
+
+let I = [a,b,c]
+
+thus, you get [a,b,c,a,d,a,b,c] if you simplify [[a | [b,c]] | [F,G | [I]]].
+for [P,a | [d,P|R]], after simplification, you get [a,b,c,a,d,a,b,c | R] (as seen above).
+
+Now if you just let R = [], then both the pairs match, thus it is true.
+
+------------------------------------------------------------------------------
+[ F, [G], J | W] and [mth110, mth210 | [cps305,cps721]]
+
+NOT TRUE because the second element in the first list [G] is a list, and the
+second element in the second list mth210 is just an element and not a list,
+thus its false.
+-------------------------------------------------------------------------------
+[F, G | [k, [G,1]]] and [k | [1 | [F,J]]]
+
+Simplify the second list by removing the first bar :
+[k, 1 | [F,J]]
+
+For the first list, let F = k, and G = 1.
+[k, 1 | [k, [1,1]]]
+
+and for the second list, same rule (F = k),
+[k,1 | [k,J]]
+
+let J = [1,1] for the second list,
+[k, 1 | [k, [1,1]]].
+
+Thus, LHS = RHS, and the pairs are a match if and only if you have the following rules
+stating above.
+
+---------------------------------------------------------------------------------
+[a,b | F]  and  [a, G, d | [e, [G | [c]]]]
+
+Lets try to plug in values and see if these pairs are equal.
+
+for the second list, let G = b, since the second element of the first list
+is b.
+so, G = b, and you get
+[a, b, d | [e, [b | [c]]]]
+
+now you can just let F = [d | [e,[b|[c]]]], and the list will match.
+
+Thus, these two pairs match.

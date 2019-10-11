@@ -1,0 +1,43 @@
+Syed Gilani - 500774969
+Shail Patel - 500766622
+Parth Patel - 500588969
+
+
+?- ['/Users/parth/Desktop/terms.pl'].
+true.
+
+?- cons([],null).
+true.
+
+?- cons([a], next(a,null)).
+true .
+
+?- cons([a,b],next(a,next(b,null))).
+true .
+
+?- cons([a,b,c],X).
+X = next(a, next(b, next(c, null))) .
+
+?- cons([[a]],next(next(a,null),null)).
+true .
+
+?- cons([[[a]]], next(next(next(a,null),null),null)).
+true .
+
+?- cons([a,[b,[c]]],X).
+X = next(a, next(next(b, next(next(c, null), null)), null)) .
+
+?- linked2List(next(a, null),[a]).
+true .
+
+?- cons([a, [b, [c], d], e], X), linked2List(X, List).
+X = next(a, next(next(b, next(next(c, null), next(d, null))), next(e, null))),
+List = [a, [b, [c], d], e] .
+
+?- cons([a, [b, [c], d]], X), linked2List(X, List).
+X = next(a, next(next(b, next(next(c, null), next(d, null))), null)),
+List = [a, [b, [c], d]] .
+
+?- cons([a, [b, [c]]], Term), linked2List(Term, L), cons(L, T).
+Term = T, T = next(a, next(next(b, next(next(c, null), null)), null)),
+L = [a, [b, [c]]] .

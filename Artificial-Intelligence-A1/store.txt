@@ -1,0 +1,600 @@
+﻿Syed Gilani - 500774969
+Shail Patel - 500766622
+Parth Patel - 500588969
+
+
+1.
+
+
+ 
+inStore(P,X,Y),
+Y>3,           
+X\=flashdrive
+.
+
+
+P = 321
+X = camera
+Y = 9 ? ;
+
+
+P = 447
+X = camera
+Y = 7 ? ;
+
+
+P = 879
+X = laptop
+Y = 29 ? ;
+
+
+P = 666
+X = phone
+Y = 32 ? ;
+
+
+P = 667
+X = phone
+Y = 21 ? ;
+
+
+P = 543
+X = laptop
+Y = 44 ? ;
+
+
+P = 344
+X = printer
+Y = 22 ? ;
+
+
+P = 600
+X = printer
+Y = 23 ? ;
+
+
+P = 438
+X = printer
+Y = 32 ? ;
+
+
+P = 899
+X = phone
+Y = 22 ? ;
+
+
+P = 387
+X = laptop
+Y = 12 ? ;
+
+
+P = 998
+X = phone
+Y = 23 ? ;
+
+
+P = 231
+X = phone
+Y = 32 ? ;
+
+
+P = 89
+X = earpods
+Y = 19 ? ;
+
+
+(1 ms) no
+
+
+
+
+
+
+
+
+
+
+
+
+2.
+
+
+
+
+inStore(X,laptop,Year), manufacturer(X,acer,Y), Y>=2018, price(X,Z), Z<500.
+
+
+X = 387
+Y = 2019
+Year = 12
+Z = 499 ? ;
+
+
+no
+
+
+
+
+3.
+
+
+ 
+inStore(X,phone,Quantity1),inStore(Y,phone,Quantity2),manufacturer(X,asus,Year),manufacturer(Y,apple,Year2),price(X,Price1),price(Y,Price2),Price1 < Price2.
+
+
+Price1 = 799
+Price2 = 1499
+Quantity1 = 32
+Quantity2 = 23
+X = 666
+Y = 998
+Year1 = 2017
+Year2 = 2018 ? ;
+
+
+Price1 = 599
+Price2 = 1499
+Quantity1 = 21
+Quantity2 = 23
+X = 667
+Y = 998
+Year1 = 2015
+Year2 = 2018 ? ;
+
+
+Price1 = 99
+Price2 = 1499
+Quantity1 = 2
+Quantity2 = 23
+X = 87
+Y = 998
+Year1 = 2014
+Year2 = 2018 ? ;
+
+
+no
+
+
+
+
+4.
+
+
+inStore(X,Product,Quantity),manufacturer(X,Y,Year1),manufacturer(X,Z,Year2), Y \= Z.
+
+
+no
+
+
+
+
+
+
+
+
+
+
+
+
+5.
+
+
+manufacturer(ID,apple,Year),price(ID,Price).
+
+
+ID = 231
+Price = 70
+Year = 2017 ? ;
+
+
+ID = 879
+Price = 1299
+Year = 2018 ? ;
+
+
+ID = 998
+Price = 1499
+Year = 2018 ? ;
+
+
+no
+
+
+
+
+6.
+   
+inStore(X,Product,Y), inStore(X1,Product2,Y2),        
+manufacturer(X,Company,Z),manufacturer(X1,Company,Z1),
+Product \= Product2.
+
+
+Company = canon
+Product = camera
+Product2 = printer
+X = 321
+X1 = 438
+Y = 9
+Y2 = 32
+Z = 2019
+Z1 = 2011 ? ;
+
+
+Company = apple
+Product = laptop
+Product2 = phone
+X = 879
+X1 = 998
+Y = 29
+Y2 = 23
+Z = 2018
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = laptop
+Product2 = phone
+X = 879
+X1 = 231
+Y = 29
+Y2 = 32
+Z = 2018
+Z1 = 2017 ? ;
+
+
+Company = apple
+Product = laptop
+Product2 = earpods
+X = 879
+X1 = 89
+Y = 29
+Y2 = 19
+Z = 2018
+Z1 = 2018 ? ;
+
+
+Company = acer
+Product = laptop
+Product2 = flashdrive
+X = 543
+X1 = 88
+Y = 44
+Y2 = 64
+Z = 2015
+Z1 = 2012 ? ;
+
+
+Company = acer
+Product = flashdrive
+Product2 = laptop
+X = 88
+X1 = 543
+Y = 64
+Y2 = 44
+Z = 2012
+Z1 = 2015 ? ;
+
+
+Company = acer
+Product = flashdrive
+Product2 = laptop
+X = 88
+X1 = 387
+Y = 64
+Y2 = 12
+Z = 2012
+Z1 = 2019 ? ;
+
+
+Company = canon
+Product = printer
+Product2 = camera
+X = 438
+X1 = 321
+Y = 32
+Y2 = 9
+Z = 2011
+Z1 = 2019 ? ;
+
+
+Company = acer
+Product = laptop
+Product2 = flashdrive
+X = 387
+X1 = 88
+Y = 12
+Y2 = 64
+Z = 2019
+Z1 = 2012 ? ;
+
+
+Company = apple
+Product = phone
+Product2 = laptop
+X = 998
+X1 = 879
+Y = 23
+Y2 = 29
+Z = 2018
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = phone
+Product2 = earpods
+X = 998
+X1 = 89
+Y = 23
+Y2 = 19
+Z = 2018
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = phone
+Product2 = laptop
+X = 231
+X1 = 879
+Y = 32
+Y2 = 29
+Z = 2017
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = phone
+Product2 = earpods
+X = 231
+X1 = 89
+Y = 32
+Y2 = 19
+Z = 2017
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = earpods
+Product2 = laptop
+X = 89
+X1 = 879
+Y = 19
+Y2 = 29
+Z = 2018
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = earpods
+Product2 = phone
+X = 89
+X1 = 998
+Y = 19
+Y2 = 23
+Z = 2018
+Z1 = 2018 ? ;
+
+
+Company = apple
+Product = earpods
+Product2 = phone
+X = 89
+X1 = 231
+Y = 19
+Y2 = 32
+Z = 2018
+Z1 = 2017 ? ;
+
+
+(2 ms) no
+
+
+
+
+
+
+ 7.
+inStore(LaptopID,laptop,Quantity), inStore(PrinterID,printer,Quantity2),     
+manufacturer(LaptopID,acer,Year),manufacturer(PrinterID,canon,Year2),
+price(LaptopID,LaptopPrice),price(PrinterID,PrinterPrice),
+TotalPrice is LaptopPrice+PrinterPrice.
+
+
+LaptopID = 543
+LaptopPrice = 899
+PrinterID = 438
+PrinterPrice = 299
+Quantity = 44
+Quantity2 = 32
+TotalPrice = 1198
+Year = 2015
+Year2 = 2011 ? ;
+
+
+LaptopID = 387
+LaptopPrice = 499
+PrinterID = 438
+PrinterPrice = 299
+Quantity = 12
+Quantity2 = 32
+TotalPrice = 798
+Year = 2019
+Year2 = 2011 ? ;
+
+
+no
+
+
+
+
+8.
+   
+inStore(Printer1,printer,Quantity),inStore(Printer2,printer,Quantity2),
+manufacturer(Printer1,Manufacturer1,Year),manufacturer(Printer2,Manufacturer2,Year2),
+price(Printer1,Price1),price(Printer2,Price2),
+Manufacturer1 \= Manufacturer2, Manufacturer1 \=hp, Manufacturer2 \=hp. 
+
+
+Manufacturer1 = lg
+Manufacturer2 = canon
+Price1 = 299
+Price2 = 299
+Printer1 = 600
+Printer2 = 438
+Quantity = 23
+Quantity2 = 32
+Year = 2013
+Year2 = 2011 ? 
+
+
+yes
+
+
+
+
+
+
+  9.
+
+
+manufacturer(ID1,Company,Year),manufacturer(ID2,Company,Year2),manufacturer(ID3,Company,Year3),
+ID1 \= ID2, ID1 \= ID3, ID2 \= ID3, ID2 \= ID1, ID3 \= ID1, ID3 \= ID2,   
+inStore(ID1, P1, Quantity), inStore(ID2, P2, Quantity2), inStore(ID3, P3, Quantity3), 
+P1 \= P2, P1 \= P3, P2 \= P3, P2 \= P1, P3 \= P1, P3 \= P2.  
+
+
+Company = apple
+ID1 = 231
+ID2 = 879
+ID3 = 89
+P1 = phone
+P2 = laptop
+P3 = earpods
+Quantity = 32
+Quantity2 = 29
+Quantity3 = 19
+Year = 2017
+Year2 = 2018
+Year3 = 2018 ?;
+
+
+Company = apple
+ID1 = 231
+ID2 = 89
+ID3 = 879
+P1 = phone
+P2 = earpods
+P3 = laptop
+Quantity = 32
+Quantity2 = 19
+Quantity3 = 29
+Year = 2017
+Year2 = 2018
+Year3 = 2018 ? 
+
+
+yes
+
+
+
+
+10.
+
+
+   
+inStore(ID1,phone,Quantity),inStore(ID2,phone,Quantity2),
+ manufacturer(ID1,asus,Year),manufacturer(ID2,asus,Year2),
+price(ID1,LeastExpensive), price(ID2,Price2),
+LeastExpensive =< Price2, LeastExpensive \= Price2.
+
+
+ID1 = 87
+ID2 = 666
+LeastExpensive = 99
+Price2 = 799
+Quantity = 2
+Quantity2 = 32
+Year = 2014
+Year2 = 2017 ? ;
+
+
+ID1 = 87
+ID2 = 667
+LeastExpensive = 99
+Price2 = 599
+Quantity = 2
+Quantity2 = 21
+Year = 2014
+Year2 = 2015 ? ;
+
+
+ID1 = 87
+ID2 = 899
+LeastExpensive = 99
+Price2 = 2049
+Quantity = 2
+Quantity2 = 22
+Year = 2014
+Year2 = 2009 ? ;
+
+
+ID1 = 666
+ID2 = 899
+LeastExpensive = 799
+Price2 = 2049
+Quantity = 32
+Quantity2 = 22
+Year = 2017
+Year2 = 2009 ? ;
+
+
+ID1 = 667
+ID2 = 666
+LeastExpensive = 599
+Price2 = 799
+Quantity = 21
+Quantity2 = 32
+Year = 2015
+Year2 = 2017 ? ;
+
+
+ID1 = 667
+ID2 = 899
+LeastExpensive = 599
+Price2 = 2049
+Quantity = 21
+Quantity2 = 22
+Year = 2015
+Year2 = 2009 ? ;
+
+
+ID1 = 87
+ID2 = 666
+LeastExpensive = 99
+Price2 = 799
+Quantity = 2
+Quantity2 = 32
+Year = 2014
+Year2 = 2017 ? ;
+
+
+ID1 = 87
+ID2 = 667
+LeastExpensive = 99
+Price2 = 599
+Quantity = 2
+Quantity2 = 21
+Year = 2014
+Year2 = 2015 ? ;
+
+
+ID1 = 87
+ID2 = 899
+LeastExpensive = 99
+Price2 = 2049
+Quantity = 2
+Quantity2 = 22
+Year = 2014
+Year2 = 2009 ? ;
+
+
+(1 ms) no
