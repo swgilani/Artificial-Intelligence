@@ -1,0 +1,55 @@
+Syed Gilani - 500774969 - section 2
+Shail Patel - 500766622 - section 4
+Parth Patel - 500588969 - section 4
+
+
+
+Puzzle.txt
+*puzzle1 output*
+
+X is cputime, solve(L), Y is cputime, CpuTime is Y - X.
+
+L = [9, 0, 5, 1, 2, 8, 6],
+X = 46244.01998,
+Y = 46250.18106,
+CpuTime = 6.161080000005313
+
+
+| ?- print_solution(L).
+
+    905
+*    12
+--------
+   1810
+ + 905
+--------
+  10860
+
+true ?
+
+(1513 ms) yes
+
+---------------------
+
+*puzzle2 output*
+
+X is cputime, solve(L), Y is cputime, CpuTime is Y - X.
+
+L = [9, 0, 5, 1, 2, 8, 6],
+X = 48288.28956,
+Y = 48288.29008,
+CpuTime = 0.0005200000014156103
+
+| ?- print_solution(L).
+
+    905
+*    12
+--------
+   1810
+ + 905
+--------
+  10860
+
+true ?
+
+(1 ms) yes
